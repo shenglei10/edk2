@@ -12,12 +12,12 @@
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/
-
+    
 //
 // The package level header files this module uses
 //
 #include <Uefi.h>
-#include <PiPei.h>
+#include <PiPei.h>	
 
 //
 // The protocols, PPI and GUID defintions for this module
@@ -104,7 +104,7 @@ CheckCapsuleFromRam (
   }
 
   return FALSE;
-}
+} 
 
 /**
   Determine if it is a Capsule On Disk mode.

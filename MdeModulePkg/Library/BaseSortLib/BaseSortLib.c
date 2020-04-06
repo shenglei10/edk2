@@ -29,8 +29,8 @@
 
   @param[in, out] BufferToSort   on call a Buffer of (possibly sorted) elements
                                  on return a buffer of sorted elements
-  @param[in] Count               the number of elements in the buffer to sort
   @param[in] ElementSize         Size of an element in bytes
+  @param[in] Count               the number of elements in the buffer to sort
   @param[in] CompareFunction     The function to call to perform the comparison
                                  of any 2 elements
   @param[in] Buffer              Buffer of size ElementSize for use in swapping
@@ -48,7 +48,7 @@ QuickSortWorker (
   VOID        *Pivot;
   UINTN       LoopCount;
   UINTN       NextSwapLocation;
-
+  int         as = 2;
   ASSERT(BufferToSort     != NULL);
   ASSERT(CompareFunction  != NULL);
   ASSERT(Buffer  != NULL);
