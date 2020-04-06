@@ -25,6 +25,8 @@
 #include <Library/SafeIntLib.h>
 #include <IndustryStandard/Bmp.h>
 
+#define aaabbb
+#define asd132123
 #include <Library/BmpSupportLib.h>
 
 //
@@ -572,4 +574,4 @@ TranslateGopBltToBmp (
   }
 
   return RETURN_SUCCESS;
-}
+} 
