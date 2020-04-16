@@ -15,7 +15,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 // AES_NB is a constant (value = 4) for NIST FIPS-197.
 //
 #define AES_NB                     4
-
+  
 //
 // Pre-computed AES Forward Table: AesForwardTable[t] = AES_SBOX[t].[02, 01, 01, 03]
 // AES_SBOX (AES S-box) is defined in sec 5.1.1 of FIPS PUB 197.
