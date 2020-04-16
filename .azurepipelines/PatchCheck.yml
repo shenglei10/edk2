@@ -1,0 +1,26 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger: none
+
+pr:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+  clean: true
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.8.x'
+    architecture: 'x64'
+
+- script: |
+    git fetch origin $(System.PullRequest.TargetBranch):$(System.PullRequest.TargetBranch)
+    python BaseTools/Scripts/PatchCheck.py $(System.PullRequest.TargetBranch)..$(System.PullRequest.SourceCommitId)
+  displayName: 'Use PatchCheck.py to verify patch series in pull request'
