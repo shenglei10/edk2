@@ -86,3 +86,19 @@ Returns:
 
   return Status;
 }
+
+/*++
+
+Routine Description:
+
+  Peform the boot mode determination logic
+
+Arguments:
+
+  PeiServices - General purpose services available to every PEIM.
+
+Returns:
+
+  Status -  EFI_SUCCESS if the boot mode could be set
+
+**/
