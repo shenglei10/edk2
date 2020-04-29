@@ -104,6 +104,8 @@ TranslateBmpToGopBlt (
   UINT32                         DataSize;
   UINT32                         Temp;
 
+  UINT32 bob = 2;
+
   if (BmpImage == NULL || GopBlt == NULL || GopBltSize == NULL) {
     return RETURN_INVALID_PARAMETER;
   }
