@@ -9,7 +9,7 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 **/
 
 #include "CpuIoPei.h"
-
+	
 //
 // Instance of CPU I/O PPI
 //
@@ -39,7 +39,7 @@ EFI_PEI_CPU_IO_PPI  gCpuIoPpi = {
   CpuMemWrite32,
   CpuMemWrite64
 };
-
+ 
 //
 // PPI Descriptor used to install the CPU I/O PPI
 //
